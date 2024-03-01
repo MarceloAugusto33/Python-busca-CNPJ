@@ -2,6 +2,7 @@ import requests
 import re
 
 def display():
+    print(" ")
     print("|                        |")
     print("|  BUSCA DADOS POR CNPJ  |")
     print("|                        |")
@@ -9,16 +10,18 @@ def display():
     print("|  |0| SAIR              |")
     print("|  |1| BUSCAR POR CNPJ   |")
     print("|                        |")
+    print(" ")
 
-def getApi(cnpj):
+def getDataApi(cnpj):
 
     request = requests.get('https://receitaws.com.br/v1/cnpj/'+cnpj)
 
-    if(request.status_code == 200):
+    if request.status_code == 200:
 
         requestJSON = request.json()
 
         if(requestJSON['status'] == 'ERROR'): 
+            print(" ")
             return "Esse CNPJ não existe na api"
         
         print("Dados Encontrados na API")
@@ -64,11 +67,11 @@ while True:
         if option == 0:
             break
         elif option == 1:
-            print("Digite o CNPJ NO MODELO SEGUINTE: '12.123.123/1234-12'")
+            print("Digite o CNPJ NO SEGUINTE MODELO: 12.123.123/1234-12")
             cnpj = str(input("Digite o CNPJ: "))
 
             if(validaCNPJ(cnpj)):
-                print(getApi(filtrar_numeros(cnpj)))
+                print(getDataApi(filtrar_numeros(cnpj)))
             else: 
                 print("CNPJ INVALIDO!")
                 print("")
@@ -76,13 +79,6 @@ while True:
         print(" ")
         print("DIGITE SOMENTE NUMEROS")
         print(" ")
-
-        
-            
-
-
-    
-
 
 
 print("Programa finalizado!")
