@@ -1,6 +1,6 @@
 ## CLONE O REPOSITORIO
 ```bash
-    https://github.com/MarceloAugusto33/Python-busca-CNPJ.git
+    git clone https://github.com/MarceloAugusto33/Python-busca-CNPJ.git
 ```
 
 Opção 1: Script Python Busca CNPJ
