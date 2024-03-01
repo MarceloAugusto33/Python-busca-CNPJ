@@ -1,3 +1,8 @@
+## CLONE O REPOSITORIO
+```bash
+    https://github.com/MarceloAugusto33/Python-busca-CNPJ.git
+```
+
 Opção 1: Script Python Busca CNPJ
 Objetivo: Codifique um script python que realize a consulta do CNPJ de uma empresa na API do receitaws. O script deve receber como entrada um cnpj e exibir na tela os dados no formtado do JSON abaixo:
 
